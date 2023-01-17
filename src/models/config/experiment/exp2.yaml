@@ -1,0 +1,13 @@
+#exp2.yaml
+
+dirs:
+  input_path: ${hydra:runtime.cwd}/data/raw
+  output_path: ${hydra:runtime.cwd}/data/processed
+
+
+
+hyperparameters:
+  batch_size: 64
+  lr: 1e-2
+  epochs: 4
+  seed: 1337

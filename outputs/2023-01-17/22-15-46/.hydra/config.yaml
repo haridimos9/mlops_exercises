@@ -1,0 +1,12 @@
+experiment:
+  dirs:
+    input_path: ${hydra:runtime.cwd}/data/raw
+    output_path: ${hydra:runtime.cwd}/data/processed
+  hyperparameters:
+    batch_size: 8
+    lr: 0.001
+    epochs: 2
+    seed: 1337
+optimizers:
+  Optimizer:
+  - optimizer: AdamW

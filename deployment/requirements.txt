@@ -1,0 +1,9 @@
+fastapi
+opencv-python-headless
+Pillow
+pydantic
+requests
+torch
+transformers
+uvicorn
+python-multipart
