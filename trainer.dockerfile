@@ -21,6 +21,7 @@ COPY requirements.txt requirements.txt
 RUN git clone https://github.com/haridimos9/mlops_exercises.git
 WORKDIR /mlops_exercises/
 RUN pip install -r requirements.txt --no-cache-dir
+RUN export GOOGLE_APPLICATION_CREDENTIALS=dtumlops-374716-e0c1d21736a7.json
 
 RUN dvc pull
 ENTRYPOINT ["python", "-u", "src/models/train_model.py"]
