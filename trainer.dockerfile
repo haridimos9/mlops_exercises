@@ -9,7 +9,7 @@ RUN apt update && \
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y git
-COPY requirements.txt requirements.txt
+COPY data.dvc data.dvc
 # COPY setup.py setup.py
 # #COPY data/ data/
 # COPY .dvcignore .dvcignore
@@ -23,5 +23,5 @@ WORKDIR /mlops_exercises/
 RUN pip install -r requirements.txt --no-cache-dir
 RUN export GOOGLE_APPLICATION_CREDENTIALS=dtumlops-374716-e0c1d21736a7.json
 
-RUN dvc pull
+RUN dvc pull -v
 ENTRYPOINT ["python", "-u", "src/models/train_model.py"]
