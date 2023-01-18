@@ -1,0 +1,5 @@
+## Create CPU instance with pytorch
+gcloud compute instances create exercises --zone="europe-west1-b" --image-family="pytorch-latest-cpu" --image-project="deeplearning-platform-release" --maintenance-policy TERMINATE
+
+## Create GPU instance with pytorch
+gcloud compute instances create gpudocker --zone="europe-west1-b" --image-family="pytorch-latest-gpu" --image-project="deeplearning-platform-release" --accelerator="type=nvidia-tesla-k80,count=1" --metadata="install-nvidia-driver=True" --maintenance-policy TERMINATE
