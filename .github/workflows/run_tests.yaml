@@ -19,7 +19,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
         python-version: ["3.9"]
-        pytorch-version: ["1.12", "1.13"]
+        pytorch-version: ["1.13"]
 
     steps:
     - name: Checkout
