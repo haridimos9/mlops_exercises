@@ -5,10 +5,11 @@ FROM python:3.9-slim
 RUN apt update && \
     apt install --no-install-recommends -y build-essential gcc && \
     apt clean && rm -rf /var/lib/apt/lists/*
+
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y git
-# COPY requirements.txt requirements.txt
+COPY requirements.txt requirements.txt
 # COPY setup.py setup.py
 # #COPY data/ data/
 # COPY .dvcignore .dvcignore
